@@ -48,8 +48,6 @@ int main() {
 
   printList(list);
 
-  freeList(list);
-
   cout << list->value << endl;
 
   freeList(list);
@@ -60,11 +58,13 @@ int main() {
 
   cout << leakNode->value << endl;
 
+delete leakNode;
+
+
   int* arr = new int[3];
   arr[0] = 1;
   arr[1] = 2;
   arr[2] = 3;
-  arr[5] = 999;
 
   delete[] arr;
 
